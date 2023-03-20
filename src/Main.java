@@ -13,6 +13,13 @@ class Date {
     int month;
     int day;
 
+    boolean isLeapYear() {
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+            return true;
+        }
+        return false;
+    }
+
     @Override
     public String toString() {
         return String.format("%4d-%02d-%02d", year, month, day);
